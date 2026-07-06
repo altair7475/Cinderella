@@ -42,6 +42,16 @@
     }
 }
 
+@keyframes drift{
+    from{
+        transform:translate(0,0);
+    }
+    to {
+        transform:translate(250px, 250px);
+    }
+}
+
+
 body{
     font-family:Garamond, serif;
     margin:0;
@@ -49,6 +59,31 @@ body{
     color:#333;
     animation: fadeIn 1s ease-out;
 }
+
+body{
+    font-family:Garamond, serif;
+    margin: 0;
+    color: #333;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at top, #f5fdfc  0%, #f5fafd 35%, #F5F6FD 100%);
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:-50%;
+    z-index: -2;
+    background:repeating-linear-gradient(
+        45deg,
+        rgba(142, 142, 142, 0.1) 0px,
+        rgba(142, 142, 142, 0.1) 2px,
+        transparent 2px,
+        transparent 80px
+    );
+    animation:drift 25s linear infinite
+}
+
 
 
 header{
@@ -80,14 +115,16 @@ flex:0.48;
 .main{
     text-align:center;
     padding:250px 20px;
-    text-shadow: 2px 2px 6px rgba(255,255,255,0.8);
+    text-decoration-color:#0e1a40;
+    text-shadow: 2px 2px 6px rgba(255,255,255,0.8); 
     animation: fadeUp 1s ease-out;
 }
 
 .main h1{
     font-size:48px;
     margin-bottom:20px;
-    text-shadow: 2px 2px 6px rgba(255,255,255,0.8);
+    text-decoration-color:#0e1a40;
+    text-shadow: 2px 2px 6px rgba(255,255,255,0.8); 
     animation: fadeUp 1s ease-out;
 }
 
