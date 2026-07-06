@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
 
+
+<style>
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+body{
+    font-family:Garamond, serif;
+    margin:0;
+    background-color:#F5FAFD;
+    color:#333;
+    animation: fadeIn 1s ease-in;
+}
+
+
+header{
+background:linear-gradient(to right,#222f5b,#0e1a40);
+color:white;
+text-align:left;
+padding:15px 20px;
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+
+header h2,
+header h3,
+header h4,
+header h5{
+margin:0;
+font-size: 25px;
+}
+
+header h1{
+margin: 0;
+font-size: 40px;
+flex:0.45;
+}
+
+.main{
+    text-align:center;
+    padding:170px 20px;
+    text-shadow: 2px 2px 6px rgba(255,255,255,0.8);
+    animation: fadeUp 1s ease-out;
+}
+
+.main h1{
+    font-size:48px;
+    margin-bottom:20px;
+    text-shadow: 2px 2px 6px rgba(255,255,255,0.8);
+    animation: fadeUp 1s ease-out;
+}
+
+.Snowlax{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    opacity: 0.2;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.main p{
+    font-size:22px;
+    margin-bottom:40px;
+    animation: fadeUp 1s ease-out;
+}
+
+.button{
+    font-family:Garamond ,serif;
+    background-color:#222f5b;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:20px;
+    animation: fadeUp 1s ease-out;
+}
+
+.button:hover{
+    background-color:#4F81BD;
+}
+
+</style>
+
+<header>
+    <h1>Cinderella</h1>
+    <h2><a href="Products.html" style="color: aliceblue; text-decoration: none;">Products</a></h2>
+    <h3><a href="Order.html" style="color: aliceblue; text-decoration: none;">Order</a></h3>
+    <h4><a href="ContactUs.html" style="color: aliceblue; text-decoration: none;">Contact Us</a></h4>
+    <h5><a href="AboutUs.html" style="color: aliceblue; text-decoration: none;">About Us</a></h5>
+</header>
+
+
+<section class="main">
+    <img src="snorlax.png" class = "Snowlax" alt="Snorlax">
+    <h1>Welcome to Cinderella</h1>
+    <p>Your home for soft, cuddly and adorable plushies.</p>
+    <a href="products.html" class="button">Browse</a>
+</section>
+</html>
