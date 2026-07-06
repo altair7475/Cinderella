@@ -18,6 +18,17 @@
     }
 }
 
+@keyframes fadeInSnow {
+    from{
+        opacity:0;
+        transform:translate(-50%, -55%);
+    }
+    to{
+        opacity:0.2;
+        transform:translate(-50%, -43%);
+    }
+}
+
 @keyframes fadeUp {
     from{
         opacity:0;
@@ -35,7 +46,6 @@ body{
     margin:0;
     background-color:#F5FAFD;
     color:#333;
-    animation: fadeIn 1s ease-in;
 }
 
 
@@ -88,6 +98,7 @@ flex:0.45;
     opacity: 0.2;
     z-index: 1;
     pointer-events: none;
+    animation: fadeInSnow 1s ease-in;
 }
 
 .main p{
@@ -120,7 +131,6 @@ flex:0.45;
     <h4><a href="ContactUs.html" style="color: aliceblue; text-decoration: none;">Contact Us</a></h4>
     <h5><a href="AboutUs.html" style="color: aliceblue; text-decoration: none;">About Us</a></h5>
 </header>
-
 
 <section class="main">
     <img src="snorlax.png" class = "Snowlax" alt="Snorlax">
