@@ -10,7 +10,6 @@
 
 
 <style>
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -74,7 +73,7 @@ body::before{
     content:"";
     position:fixed;
     inset:-50%;
-    z-index: -2;
+    z-index: -1;
     background:repeating-linear-gradient(
         45deg,
         rgba(142, 142, 142, 0.1) 0px,
@@ -95,7 +94,6 @@ padding:15px 20px;
 display:flex;
 align-items:center;
 gap:50px;
-flex-wrap:wrap;
 }
 
 
@@ -118,6 +116,7 @@ flex:0.48;
     padding:250px 20px;
     text-decoration-color:#0e1a40;
     text-shadow: 2px 2px 6px rgba(255,255,255,0.8); 
+    z-index: 1;
     animation: fadeUp 1s ease-out;
 }
 
@@ -126,20 +125,10 @@ flex:0.48;
     margin-bottom:20px;
     text-decoration-color:#0e1a40;
     text-shadow: 2px 2px 6px rgba(255,255,255,0.8); 
+    z-index: 1;
     animation: fadeUp 1s ease-out;
 }
 
-.Snowlax{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    opacity: 0.2;
-    z-index: 1;
-    pointer-events: none;
-    animation: fadeInSnow 1s ease-in;
-}
 
 .main p{
     font-size:22px;
@@ -155,6 +144,7 @@ flex:0.48;
     padding:15px 30px;
     border-radius:10px;
     font-size:20px;
+    z-index: 1;
     animation: fadeUp 1s ease-out;
 }
 
@@ -173,7 +163,6 @@ flex:0.48;
 </header>
 
 <section class="main">
-    <img src="snorlax.png" class = "Snowlax" alt="Snorlax">
     <h1>Welcome to Cinderella</h1>
     <p>Your home for soft, cuddly and adorable plushies.</p>
     <a href="Products.html" class="button">Browse</a>
