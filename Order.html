@@ -1,3 +1,4 @@
+<!--Author: Rayner, 261332B-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,11 +75,71 @@ flex:0.48;
 </header>
 
 <!--Top stuff done by Haysab to make website more appealing-->
+<!--Everything below was done by Rayner-->
 
 
+<form action="thankyou.html" method="get">
 
+    <h2>Place Your Order</h2>
 
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" size="30" required>
+    <br><br>
 
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" size="30" required>
+    <br><br>
 
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" size="30">
+    <br><br>
 
+    <label for="plushie">Choose a Plushie:</label><br>
+    <select name="plushie" id="plushie">
+        <option value="snorlax">Snorlax</option>
+        <option value="sharko">Sharko</option>
+        <option value="glock">Glock (Fake)</option>
+        <option value="mimikyu">Mimikyu</option>
+        <option value="ariiq">Ariiq Body Pillow</option>
+    </select>
+    <br><br>
+
+    <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+    <br><br>
+
+    <label>Delivery Method:</label><br>
+    <input type="radio" id="delivery" name="delivery" value="Delivery" checked>
+    <label for="delivery">Home Delivery</label>
+
+    <input type="radio" id="pickup" name="delivery" value="Pickup">
+    <label for="pickup">Self Collection</label>
+    <br><br>
+
+    <label>Payment Method:</label><br>
+    <input type="radio" id="card" name="payment" value="Card" checked>
+    <label for="card">Credit/Debit Card</label>
+
+    <input type="radio" id="paynow" name="payment" value="PayNow">
+    <label for="paynow">PayNow</label>
+
+    <input type="radio" id="cash" name="payment" value="Cash">
+    <label for="cash">Cash on Delivery</label>
+    <br><br>
+
+    <label for="address">Delivery Address:</label><br>
+    <textarea id="address" name="address" rows="4" cols="40"></textarea>
+    <br><br>
+
+    <label for="remarks">Special Requests:</label><br>
+    <textarea id="remarks" name="remarks" rows="4" cols="40" placeholder="Gift wrapping, message, etc."></textarea>
+    <br><br>
+
+    <input type="checkbox" id="agree" name="agree" required>
+    <label for="agree">I agree to the terms and conditions.</label>
+    <br><br>
+
+    <input type="submit" value="Place Order">
+    <input type="reset" value="Clear Form">
+</form>
 </html>
