@@ -1,12 +1,4 @@
-<!-->UPDATE YOUR RESPECTIVE CODE--
-<!--index.html is the homepage btw
-
-
-
-
-
-
-CREDITS
+<!--CREDITS
 ----------------------------------
 SHARKO PLUSHIE FROM DEEPWOKEN
 
@@ -17,3 +9,4 @@ LOTUS FLOWER
 
 GLOCK IMAGE FROM GOOGLE
 ----------------------------------
+-->
