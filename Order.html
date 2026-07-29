@@ -1,4 +1,5 @@
 <!--Author: Rayner, 261332B-->
+<!--Author: Rayner, 261332B-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,20 +87,20 @@ gap:12px;
 <!--Everything below was done by Rayner-->
 
 
-<form action="thankyou.html" method="get">
+<form action="confirm.html" method="get">
 
     <h2>Place Your Order</h2>
 
     <label for="name">Full Name:</label><br>
-    <input type="text" id="name" name="name" size="30" required>
+    <input type="text" id="name" name="name" size="30" placeholder="Your Name" required>
     <br><br>
 
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" size="30" required>
+    <input type="email" id="email" name="email" size="30" placeholder="abc@xyz" required>
     <br><br>
 
     <label for="phone">Phone Number:</label><br>
-    <input type="tel" id="phone" name="phone" size="30">
+    <input type="tel" id="phone" name="phone" size="30" placeholder="12345678" required>
     <br><br>
 
     <label for="plushie">Choose a Plushie:</label><br>
@@ -115,7 +116,7 @@ gap:12px;
     <br><br>
 
     <label for="quantity">Quantity:</label><br>
-    <input type="number" id="quantity" name="quantity" min="1" max="10" value="" required >
+    <input type="number" id="quantity" name="quantity" min="1" max="10" value="" required>
     <br><br>
 
     <label>Delivery Method:</label><br>
@@ -130,16 +131,13 @@ gap:12px;
     <input type="radio" id="card" name="payment" value="Card" required >
     <label for="card">Credit/Debit Card</label>
 
-    <input type="radio" id="paynow" name="payment" value="PayNow">
-    <label for="paynow">PayNow</label>
-
     <input type="radio" id="cash" name="payment" value="Cash">
     <label for="cash">Cash on Delivery</label>
     <br><br>
 
     <label for="address">Delivery Address:</label><br>
-    <textarea id="address" name="address" rows="4" cols="40" required ></textarea>
-    <br><br>
+    <textarea id="address" name="address" rows="4" cols="40" placeholder="Your Address" required></textarea>
+    <br><br
 
     <label for="remarks">Special Requests:</label><br>
     <textarea id="remarks" name="remarks" rows="4" cols="40" placeholder="Gift wrapping, message, etc."></textarea>
