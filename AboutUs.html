@@ -7,7 +7,24 @@
     <title>About Us</title>
     <link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
 </head><meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<style>/* images never overflow their box */
+img { max-width: 100;
+height: auto; }
+/* boxes in % rather than px */
+.column { width: 50; }
+* { box-sizing: border-box; }
+     (max-width: 600) {
+/* stack the menu vertically */
+nav a { display: block; }
+/* cards become full width */
+.card { width: 100; }
+h1 { font-size: 18; }
+}.row { display: flex; }
+    .card { width: 33; box-sizing: border-box; }
+    (max-width: 600) {
+.row { flex-direction: column; }
+.card { width: 100; }
+}
 
 @keyframes fadeIn {
     from {
