@@ -1,4 +1,4 @@
-<!--Author: Cyrus, 261432K -->
+<!--Author: merged by Copilot--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,111 +7,241 @@
     <title>Contact Us</title>
     <link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
 </head>
-<style>
 
+<style>
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 @keyframes fadeUp {
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from{ opacity:0; transform:translateY(30px); }
+    to  { opacity:1; transform:translateY(0); }
 }
+
+@keyframes drift{
+    from{ transform:translate(0,0); }
+    to  { transform:translate(250px, 250px); }
+}
+
+/* Added */
+*{ box-sizing:border-box; }
 
 body{
-    font-family:Garamond, serif;
-    margin:0;
-    background-color:#F5FAFD;
-    color:#333;
+    font-family: Garamond, serif;
+    margin: 0;
+    color: #333;
+    overflow-x: hidden;
     animation: fadeIn 1s ease-out;
+    background: radial-gradient(circle at top, #e9f1f2 0%, #e1eced 35%, #dae7e9 100%);
 }
 
+body::before{
+    content:"";
+    position:fixed;
+    inset:-50%;
+    z-index: -1;
+    background:repeating-linear-gradient(
+        45deg,
+        rgba(142, 142, 142, 0.1) 0px,
+        rgba(142, 142, 142, 0.1) 2px,
+        transparent 2px,
+        transparent 80px
+    );
+    animation:drift 25s linear infinite;
+}
 
 header{
-background:linear-gradient(to right,#222f5b,#0e1a40);
-color:white;
-text-align:left;
-padding:15px 20px;
-display:flex;
-align-items:center;
-gap:50px;
-flex-wrap:wrap;
+    background:linear-gradient(to right,#222f5b,#0e1a40);
+    color:white;
+    text-align:left;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:50px;
 }
 
+header h1{
+    margin:0;
+    font-size:40px;
+    flex:0.48;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.header-crown{ width:58px; height:auto; }
 
 header h2,
 header h3,
 header h4,
 header h5{
-margin:0;
-font-size: 25px;
+    margin:0;
+    font-size:25px;
 }
 
-header h1{
-margin: 0;
-font-size: 40px;
-flex:0.48;
-display:flex;
-align-items:center;
-gap:12px;
+.main{
+    position:relative;
+    isolation:isolate;
+    text-align:center;
+    padding:120px 20px;
+    text-decoration-color:#0e1a40;
+    text-shadow:2px 2px 6px rgba(255,255,255,0.8);
+    z-index:1;
+    animation:fadeUp 1s ease-out;
 }
 
-.header-crown{
-    width:58px;
-    height:auto;
+.main::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:url("Images/snorlax.png") center / min(420px,75vw) no-repeat;
+    opacity:0.28;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.main h1{
+    font-size:38px;
+    margin-bottom:20px;
+    text-shadow:2px 2px 6px rgba(255,255,255,0.8);
+    animation:fadeUp 1s ease-out;
+}
+
+.contact-card{
+    max-width:900px;
+    margin:0 auto;
+    background:rgba(255,255,255,0.85);
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 24px rgba(8,10,20,0.08);
+    text-align:left;
+}
+
+.contact-card p{ margin:0 0 12px 0; }
+
+form label{ display:block; font-weight:600; margin-bottom:6px; }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+    width:100%;
+    padding:10px 12px;
+    border:1px solid #cfd8e3;
+    border-radius:8px;
+    font-size:16px;
+    background:transparent;
+    margin-bottom:14px;
+}
+
+input[type="submit"]{
+    background-color:#222f5b;
+    color:white;
+    padding:12px 22px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+input[type="submit"]:hover{ background-color:#4F81BD; }
+
+.info-row{ display:flex; gap:20px; align-items:flex-start; }
+.info-row p{ margin:8px 0; }
+
+/* ================= TABLETS ================= */
+
+@media (max-width:768px){
+
+    header{ flex-wrap:wrap; justify-content:center; gap:20px; text-align:center; }
+
+    header h1{ flex:100%; justify-content:center; font-size:34px; }
+
+    .header-crown{ width:48px; }
+
+    header h2,
+    header h3,
+    header h4,
+    header h5{ font-size:20px; }
+
+    .main{ padding:80px 20px; }
+
+    .main::before{ background-size:min(300px,80vw); }
+
+    .main h1{ font-size:32px; }
+
+    .contact-card{ padding:24px; }
+}
+
+/* ================= PHONES ================= */
+
+@media (max-width:480px){
+
+    header{ flex-direction:column; align-items:center; gap:15px; }
+
+    header h1{ flex:unset; font-size:28px; }
+
+    .header-crown{ width:40px; }
+
+    header h2,
+    header h3,
+    header h4,
+    header h5{ width:100%; text-align:center; font-size:18px; }
+
+    .main{ padding:60px 15px; }
+
+    .main::before{ background-size:220px; opacity:0.22; }
+
+    .main h1{ font-size:26px; }
+
+    .contact-card{ padding:18px; border-radius:10px; }
+
+    .info-row{ flex-direction:column; }
 }
 
 </style>
 
+<body>
+
 <header>
     <h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown"></h1>
-    <h2><a href="index.html" style="color: aliceblue; text-decoration: none;">Home</a></h2>
-    <h3><a href="Products.html" style="color: aliceblue; text-decoration: none;">Products</a></h3>
-    <h4><a href="Order.html" style="color: aliceblue; text-decoration: none;">Order</a></h4>
-    <h5><a href="AboutUs.html" style="color: aliceblue; text-decoration: none;">About Us</a></h5>
+    <h2><a href="Products.html" style="color:aliceblue;text-decoration:none;">Products</a></h2>
+    <h3><a href="Order.html" style="color:aliceblue;text-decoration:none;">Order</a></h3>
+    <h4><a href="ContactUs.html" style="color:aliceblue;text-decoration:none;">Contact Us</a></h4>
+    <h5><a href="AboutUs.html" style="color:aliceblue;text-decoration:none;">About Us</a></h5>
 </header>
 
-<!--Top stuff done by Haysab to make website more appealing-->
-<!-- Anything below is done by Cyrus-->
+<section class="main">
+    <h1>Contact Us</h1>
 
-<h1>Contact Us </h1>
-<p>We value your feedback and inquiries. Please feel free to reach out to us by filling out the contact form on our website. Alternatively, you can reach out to us using our contact information below. Our dedicated team is here to assist you with any questions, concerns, or suggestions you may have. We look forward to hearing from you and providing the best possible support for your needs.</p>
+    <div class="contact-card">
+        <p>We value your feedback and inquiries. Please feel free to reach out to us by filling out the contact form below. Alternatively, you can reach out to us using our contact information below.</p>
 
-    
-<form action="feedbackpage.html" method="get">
- <label for="name">Full Name:</label><br>
-    <input type="text" id="name" name="name" size="30" required>
-    <br><br>
+        <form action="feedbackpage.html" method="get">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" size="30" required>
-    <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-    <label for="phone">Phone Number:</label><br>
-    <input type="tel" id="phone" name="phone" size="30">
-    <br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
 
- <label for="address">Message:</label><br>
-    <textarea id="address" name="address" rows="10" cols="40" required ></textarea>
-    <br><br>
+            <label for="address">Message:</label>
+            <textarea id="address" name="address" rows="6" required></textarea>
 
- <input type="submit" value="Submit">
-</form>
+            <input type="submit" value="Submit">
+        </form>
 
-<p>📧Email: info@cinderella.com</p>
-<p>📞Phone: +6589275369</p>
-<p><a href="https://www.google.com/maps/place/Nanyang+Polytechnic/@1.3792641,103.848581,17z/data=!3m1!5s0x31da1443e96b94d1:0x87e3c8bf1134a0df!4m6!3m5!1s0x31da16eb64b0249d:0xe5f10ff680eed942!8m2!3d1.3792641!4d103.8511713?entry=ttu">📍Location: Nanyang Polytechnic</a></p>
+        <div class="info-row" style="margin-top:18px;">
+            <p>📧 Email: info@cinderella.com</p>
+            <p>📞 Phone: +6589275369</p>
+        </div>
 
+        <p style="margin-top:10px;"><a href="https://www.google.com/maps/place/Nanyang+Polytechnic/" target="_blank">Find us on the map</a></p>
+    </div>
+
+</section>
+
+</body>
 </html>
