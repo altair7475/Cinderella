@@ -80,6 +80,45 @@ header h2, header h3, header h4, header h5 {
     font-size: 20px;
 }
 
+    @media (max-width: 768px) {
+    header {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+    }
+    header h1 {
+      flex: 100%;
+      justify-content: center;
+      font-size: 34px;
+    }
+    .header-crown {
+      width: 48px;
+    }
+    header h2, header h3, header h4, header h5 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    header h1 {
+      flex: unset;
+      font-size: 28px;
+    }
+    .header-crown {
+      width: 40px;
+    }
+    header h2, header h3, header h4, header h5 {
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+    }
+}
 .button:hover { background-color: #4F81BD; }
 </style>
 <body>
