@@ -73,6 +73,58 @@ gap:12px;
     height:auto;
 }
 
+@media (max-width:480px){
+
+    header{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+    header h1{
+        flex:unset;
+        font-size:28px;
+    }
+
+    .header-crown{
+        width:40px;
+    }
+
+    header h2,
+    header h3,
+    header h4,
+    header h5{
+        width:100%;
+        text-align:center;
+        font-size:18px;
+    }
+
+    .main{
+        padding:80px 15px;
+    }
+
+    .main::before{
+        background-size:220px;
+        opacity:0.22;
+    }
+
+    .main h1{
+        font-size:28px;
+    }
+
+    .main p{
+        font-size:16px;
+        line-height:1.6;
+    }
+
+    .button{
+        display:inline-block;
+        width:80%;
+        max-width:250px;
+        text-align:center;
+    }
+}
+
 </style>
 
 <header>
