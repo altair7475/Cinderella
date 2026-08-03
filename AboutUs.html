@@ -1,323 +1,363 @@
 <!-- Author: Akash Neyton Singh Gill, 261471U. -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
-
-<style>
-
-@keyframes fadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Garamond, serif;
-    margin:0;
-    background:#F5FAFD;
-    color:#333;
-    animation:fadeIn 1s ease-out;
-}
-
-header{
-    background:linear-gradient(to right,#222f5b,#0e1a40);
-    color:white;
-    text-align:left;
-    padding:15px 20px;
-    display:flex;
-    align-items:center;
-    gap:50px;
-    flex-wrap:wrap;
-}
-
-header h1{
-    margin:0;
-    font-size:40px;
-    flex:0.48;
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.header-crown{
-    width:58px;
-    height:auto;
-}
-
-header h2,
-header h3,
-header h4,
-header h5{
-    margin:0;
-    font-size:25px;
-}
-
-header a{
-    color:aliceblue;
-    text-decoration:none;
-}
-
-header a:hover{
-    color:#d9e8ff;
-}
-
-.container{
-    max-width:900px;
-    margin:60px auto;
-    background:white;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
-    animation:fadeUp 1s ease-out;
-}
-
-.container h1{
-    text-align:center;
-    color:#222f5b;
-    margin-top:0;
-    font-size:42px;
-}
-
-.container h2{
-    color:#222f5b;
-    margin-top:35px;
-    font-size:30px;
-}
-
-.container h3{
-    margin-top:25px;
-    margin-bottom:5px;
-    color:#4F81BD;
-    font-size:24px;
-}
-
-.container p{
-    font-size:20px;
-    line-height:1.7;
-}
-
-.container ul{
-    padding-left:30px;
-}
-
-.container li{
-    font-size:20px;
-    line-height:1.7;
-    margin-bottom:10px;
-}
-
-@media (max-width:768px){
-
-    header{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:20px;
-        text-align:center;
-    }
-
-    header h1{
-        flex:100%;
-        justify-content:center;
-        font-size:34px;
-    }
-
-    .header-crown{
-        width:48px;
-    }
-
-    header h2,
-    header h3,
-    header h4,
-    header h5{
-        font-size:20px;
-    }
-
-    .container{
-        margin:30px 20px;
-        padding:30px;
-    }
-
-    .container h1{
-        font-size:36px;
-    }
-
-    .container h2{
-        font-size:28px;
-    }
-
-    .container h3{
-        font-size:22px;
-    }
-
-    .container p,
-    .container li{
-        font-size:18px;
-    }
-}
-
-@media (max-width:480px){
-
-    header{
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
-    }
-
-    header h1{
-        flex:unset;
-        font-size:28px;
-    }
-
-    .header-crown{
-        width:40px;
-    }
-
-    header h2,
-    header h3,
-    header h4,
-    header h5{
-        width:100%;
-        text-align:center;
-        font-size:18px;
-    }
-
-    .container{
-        margin:20px 15px;
-        padding:20px;
-    }
-
-    .container h1{
-        font-size:28px;
-    }
-
-    .container h2{
-        font-size:24px;
-    }
-
-    .container h3{
-        font-size:20px;
-    }
-
-    .container p,
-    .container li{
-        font-size:16px;
-    }
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown"></h1>
-
-    <h2><a href="index.html">Home</a></h2>
-    <h3><a href="Products.html">Products</a></h3>
-    <h4><a href="Order.html">Order</a></h4>
-    <h5><a href="ContactUs.html">Contact Us</a></h5>
-</header>
-
-<div class="container">
-
-<h1>About Us</h1>
-
-<h2>Welcome to Cinderella</h2>
-
-<p>
-At Cinderella, we believe every plushie has the power to bring comfort, spark imagination,
-and create lasting memories. From bedtime companions to thoughtful gifts, our plush friends
-are designed to make people of all ages smile.
-</p>
-
-<h2>Our Mission</h2>
-
-<p>
-Our mission is to create high-quality, thoughtfully designed plush toys that inspire joy,
-comfort, and connection.
-</p>
-
-<h2>Our Vision</h2>
-
-<p>
-We envision a world where everyone has a source of comfort they can hold close,
-bringing warmth, happiness, and unforgettable memories into everyday life.
-</p>
-
-<h2>Our Story</h2>
-
-<p>
-Cinderella was founded in 2021 by three passionate friends who shared a love
-for adorable plushies and wanted to spread happiness through comforting,
-high-quality companions.
-</p>
-
-<h2>Meet Our Team</h2>
-
-<h3>Haysab - Founder & Creative Director</h3>
-
-<p>
-Leads the design team and oversees the creation of every new plush character.
-</p>
-
-<h3>Reyner - Co-Founder & Operations Manager</h3>
-
-<p>
-Manages production, quality assurance, and logistics to ensure every plushie
-meets our high standards.
-</p>
-
-<h3>Bosco - Head of Customer Experience</h3>
-
-<p>
-Provides friendly customer support and ensures every shopper has a wonderful
-experience from start to finish.
-</p>
-
-<h3>Cyrus - Product Designer</h3>
-
-<p>
-Creates adorable plush companions with comfort, durability, and creativity in mind.
-</p>
-
-<h2>Our Values</h2>
-
-<ul>
-    <li><strong>Quality First:</strong> Soft, safe, and durable plushies made to last.</li>
-
-    <li><strong>Creativity:</strong> Every plushie has its own personality and unique charm.</li>
-
-    <li><strong>Kindness:</strong> Bringing comfort and happiness to people of all ages.</li>
-
-    <li><strong>Sustainability:</strong> Using environmentally friendly materials whenever possible.</li>
-</ul>
-
-<p>
-Thank you for being part of the Cinderella family. Whether you're shopping for your first plush friend
-or adding to a growing collection, we're honored to help create moments of comfort,
-happiness, and adventure. We look forward to bringing smiles to you and your loved ones
-for many years to come.
-</p>
-
-</div>
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About Us | Cinderella</title>
+		<link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box
+			}
+
+			body {
+				font-family: Garamond, serif;
+				background: #F5FAFD;
+				color: #333
+			}
+
+			header {
+				background: linear-gradient(to right, #222f5b, #0e1a40);
+				color: #fff;
+				text-align: left;
+				padding: 15px 20px;
+				display: flex;
+				align-items: center;
+				gap: 50px
+			}
+
+			header h1 {
+				margin: 0;
+				font-size: 40px;
+				flex: .48;
+				display: flex;
+				align-items: center;
+				gap: 12px
+			}
+
+			.header-crown {
+				width: 58px
+			}
+
+			header h2,
+			header h3,
+			header h4,
+			header h5 {
+				margin: 0;
+				font-size: 25px
+			}
+
+			header a {
+				color: aliceblue;
+				text-decoration: none
+			}
+
+			header a:hover {
+				color: #d9e8ff
+			}
+
+			.hero {
+				min-height: 420px;
+				background: #F5FAFD;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				padding: 80px 20px
+			}
+
+			.hero h1 {
+				font-size: 4rem;
+				color: #222f5b;
+				margin-bottom: 20px
+			}
+
+			.hero p {
+				max-width: 800px;
+				font-size: 1.4rem;
+				line-height: 1.7;
+				color: #555
+			}
+
+			section {
+				padding: 70px 8%
+			}
+
+			.flip-wrap {
+				display: flex;
+				gap: 40px;
+				justify-content: center;
+				flex-wrap: wrap
+			}
+
+			.flip {
+				width: 320px;
+				height: 220px;
+				perspective: 1000px
+			}
+
+			.inner {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				transition: .8s;
+				transform-style: preserve-3d
+			}
+
+			.flip:hover .inner {
+				transform: rotateY(180deg)
+			}
+
+			.face {
+				position: absolute;
+				inset: 0;
+				border-radius: 16px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				padding: 20px;
+				backface-visibility: hidden;
+				box-shadow: 0 8px 20px rgba(0, 0, 0, .15)
+			}
+
+			.front {
+				background: #4f81bd;
+				color: #fff
+			}
+
+			.back {
+				background: #fff;
+				transform: rotateY(180deg)
+			}
+
+			.timeline {
+				display: flex;
+				gap: 30px;
+				flex-wrap: wrap;
+				justify-content: center
+			}
+
+			.tbox,
+			.member,
+			.value {
+				background: #fff;
+				border-radius: 16px;
+				padding: 25px;
+				box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
+				transition: .3s
+			}
+
+			.tbox:hover,
+			.member:hover,
+			.value:hover {
+				transform: translateY(-8px)
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 25px
+			}
+
+			.member img {
+				width: 110px;
+				height: 110px;
+				border-radius: 50%;
+				object-fit: cover;
+				display: block;
+				margin: 0 auto 15px
+			}
+
+			.values {
+				background: #eef5fb
+			}
+
+			footer {
+				background: #222f5b;
+				color: #fff;
+				text-align: center;
+				padding: 60px 20px
+			}
+
+			@media(max-width:768px) {
+				header {
+					flex-wrap: wrap;
+					justify-content: center;
+					gap: 20px;
+					text-align: center
+				}
+
+				header h1 {
+					flex: 100%;
+					justify-content: center;
+					font-size: 34px
+				}
+
+				.header-crown {
+					width: 48px
+				}
+
+				header h2,
+				header h3,
+				header h4,
+				header h5 {
+					font-size: 20px
+				}
+
+				.hero h1 {
+					font-size: 2.8rem
+				}
+			}
+
+			@media(max-width:480px) {
+				header {
+					flex-direction: column;
+					align-items: center;
+					gap: 15px
+				}
+
+				header h1 {
+					flex: unset;
+					font-size: 28px
+				}
+
+				.header-crown {
+					width: 40px
+				}
+
+				header h2,
+				header h3,
+				header h4,
+				header h5 {
+					width: 100%;
+					text-align: center;
+					font-size: 18px
+				}
+
+				.hero h1 {
+					font-size: 2.2rem
+				}
+
+				.hero p {
+					font-size: 1.1rem
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown">
+			</h1>
+			<h2>
+				<a href="index.html">Home</a>
+			</h2>
+			<h3>
+				<a href="Products.html">Products</a>
+			</h3>
+			<h4>
+				<a href="Order.html">Order</a>
+			</h4>
+			<h5>
+				<a href="ContactUs.html">Contact Us</a>
+			</h5>
+		</header>
+		<section class="hero">
+			<div>
+				<h1>About Cinderella</h1>
+				<p>Bringing comfort, joy, and unforgettable memories through adorable plush companions. Every plushie is thoughtfully designed to spread warmth, inspire imagination, and create lasting memories for people of all ages.</p>
+			</div>
+		</section>
+		<section>
+			<h2 style="text-align:center;margin-bottom:35px">Mission & Vision</h2>
+			<div class="flip-wrap">
+				<div class="flip">
+					<div class="inner">
+						<div class="face front">
+							<h2>Mission</h2>
+						</div>
+						<div class="face back">
+							<p>Create high-quality plushies that inspire comfort, happiness and connection.</p>
+						</div>
+					</div>
+				</div>
+				<div class="flip">
+					<div class="inner">
+						<div class="face front">
+							<h2>Vision</h2>
+						</div>
+						<div class="face back">
+							<p>A world where everyone has a cuddly companion that brings warmth every day.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2 style="text-align:center;margin-bottom:35px">Our Story</h2>
+			<div class="timeline">
+				<div class="tbox">
+					<h3>2021</h3>
+					<p>Cinderella was founded by friends passionate about plushies.</p>
+				</div>
+				<div class="tbox">
+					<h3>Today</h3>
+					<p>Thousands of customers enjoy our soft companions and growing collection.</p>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2 style="text-align:center;margin-bottom:35px">Meet Our Team</h2>
+			<div class="grid">
+				<div class="member">
+					<img src="Images/haysab.png">
+					<h3>Haysab</h3>
+					<p>Founder & Creative Director</p>
+				</div>
+				<div class="member">
+					<img src="Images/reyner.png">
+					<h3>Reyner</h3>
+					<p>Operations Manager</p>
+				</div>
+				<div class="member">
+					<img src="Images/bosco.png">
+					<h3>Bosco</h3>
+					<p>Customer Experience</p>
+				</div>
+				<div class="member">
+					<img src="Images/cyrus.png">
+					<h3>Cyrus</h3>
+					<p>Product Designer</p>
+				</div>
+			</div>
+		</section>
+		<section class="values">
+			<h2 style="text-align:center;margin-bottom:35px">Our Values</h2>
+			<div class="grid">
+				<div class="value">
+					<h3>⭐ Quality</h3>
+					<p>Soft, safe and durable plushies.</p>
+				</div>
+				<div class="value">
+					<h3>🎨 Creativity</h3>
+					<p>Every plushie has its own personality.</p>
+				</div>
+				<div class="value">
+					<h3>❤️ Kindness</h3>
+					<p>We aim to make every customer smile.</p>
+				</div>
+				<div class="value">
+					<h3>🌱 Sustainability</h3>
+					<p>Environmentally friendly materials whenever possible.</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<h2>Thank You!</h2>
+			<p>Whether it's your first plushie or your hundredth, thank you for being part of the Cinderella family.</p>
+		</footer>
+	</body>
 </html>

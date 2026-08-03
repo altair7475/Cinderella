@@ -4,270 +4,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Cinderella | Home</title>
     <link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: Garamond, serif;
+            color: #ffffff;
+            overflow-x: hidden;
+            background: linear-gradient(160deg, #1f3f74 0%, #2d5d99 12%, #5f97d6 35%, #9ec7f1 62%, #dbeeff 82%, #f7fbff 100%);
+        }
+
+        /* Matches the About Us header and navigation. */
+        header {
+            background: linear-gradient(to right, #222f5b, #0e1a40);
+            color: #fff;
+            text-align: left;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            flex: .48;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-crown { width: 58px; }
+
+        header h2,
+        header h3,
+        header h4,
+        header h5 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        header a {
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        header a:hover { color: #d9e8ff; }
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 90px 8%;
+            gap: 80px;
+        }
+
+        .hero-text {
+            max-width: 620px;
+            animation: fade-up 1.2s ease;
+        }
+
+        .hero h1 {
+            font-size: 5.3rem;
+            line-height: 1.05;
+            margin-bottom: 28px;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+        }
+
+        .hero p {
+            font-size: 1.35rem;
+            line-height: 1.8;
+            color: #f5f9ff;
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 17px 38px;
+            border-radius: 999px;
+            font-size: 20px;
+            transition: .35s;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #25508a;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .2);
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #25508a;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 520px;
+            filter: drop-shadow(0 35px 40px rgba(0, 0, 0, .28));
+        }
+
+        .wave {
+            position: relative;
+            margin-top: -60px;
+        }
+
+        .wave svg {
+            display: block;
+            width: 100%;
+        }
+
+        section { padding: 90px 8%; }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: #20355d;
+            margin-bottom: 70px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            background: white;
+            color: #444;
+            border-radius: 25px;
+            padding: 40px;
+            transition: .35s;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 55px rgba(0, 0, 0, .14);
+        }
+
+        .card img {
+            width: 90px;
+            margin-bottom: 25px;
+        }
+
+        .card h3 {
+            color: #23426f;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-18px); }
+        }
+
+        @media(max-width:900px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero h1 { font-size: 3.5rem; }
+            .hero-buttons { justify-content: center; }
+            .hero-image img { max-width: 380px; }
+        }
+
+        @media(max-width:768px) {
+            header { flex-wrap: wrap; justify-content: center; gap: 20px; text-align: center; }
+            header h1 { flex: 100%; justify-content: center; font-size: 34px; }
+            .header-crown { width: 48px; }
+            header h2, header h3, header h4, header h5 { font-size: 20px; }
+        }
+
+        @media(max-width:480px) {
+            header { flex-direction: column; align-items: center; gap: 15px; }
+            header h1 { flex: unset; font-size: 28px; }
+            .header-crown { width: 40px; }
+            header h2, header h3, header h4, header h5 { width: 100%; text-align: center; font-size: 18px; }
+            .hero { padding: 70px 8%; gap: 40px; }
+            .hero h1 { font-size: 2.8rem; }
+            .section-title { font-size: 2.3rem; margin-bottom: 40px; }
+        }
+    </style>
 </head>
-
-<style>
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeUp {
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes drift{
-    from{
-        transform:translate(0,0);
-    }
-    to {
-        transform:translate(250px, 250px);
-    }
-}
-    
-*{
-    box-sizing:border-box;
-}
-
-body{
-    font-family: Garamond, serif;
-    margin: 0;
-    color: #333;
-    overflow-x: hidden;
-    animation: fadeIn 1s ease-out;
-    background: radial-gradient(circle at top, #e9f1f2 0%, #e1eced 35%, #dae7e9 100%);
-}
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:-50%;
-    z-index: -1;
-    background:repeating-linear-gradient(
-        45deg,
-        rgba(142, 142, 142, 0.1) 0px,
-        rgba(142, 142, 142, 0.1) 2px,
-        transparent 2px,
-        transparent 80px
-    );
-    animation:drift 25s linear infinite;
-}
-
-header{
-    background:linear-gradient(to right,#222f5b,#0e1a40);
-    color:white;
-    text-align:left;
-    padding:15px 20px;
-    display:flex;
-    align-items:center;
-    gap:50px;
-}
-
-header h1{
-    margin:0;
-    font-size:40px;
-    flex:0.48;
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.header-crown{
-    width:58px;
-    height:auto;
-}
-
-header h2,
-header h3,
-header h4,
-header h5{
-    margin:0;
-    font-size:25px;
-}
-
-.main{
-    position:relative;
-    isolation:isolate;
-    text-align:center;
-    padding:250px 20px;
-    text-decoration-color:#0e1a40;
-    text-shadow:2px 2px 6px rgba(255,255,255,0.8);
-    z-index:1;
-    animation:fadeUp 1s ease-out;
-}
-
-.main::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:url("Images/snorlax.png") center / min(420px,75vw) no-repeat;
-    opacity:0.28;
-    z-index:-1;
-    pointer-events:none;
-}
-
-.main h1{
-    font-size:48px;
-    margin-bottom:20px;
-    text-shadow:2px 2px 6px rgba(255,255,255,0.8);
-    animation:fadeUp 1s ease-out;
-}
-
-.main p{
-    font-size:22px;
-    margin-top:0;
-    margin-bottom:40px;
-    animation:fadeUp 1s ease-out;
-}
-
-.main p:first-of-type{
-    margin-bottom:3px;
-}
-
-.button{
-    font-family:Garamond,serif;
-    background-color:#222f5b;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:10px;
-    font-size:20px;
-    animation:fadeUp 1s ease-out;
-}
-
-.button:hover{
-    background-color:#4F81BD;
-}
-
-@media (max-width:768px){
-
-    header{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:20px;
-        text-align:center;
-    }
-
-    header h1{
-        flex:100%;
-        justify-content:center;
-        font-size:34px;
-    }
-
-    .header-crown{
-        width:48px;
-    }
-
-    header h2,
-    header h3,
-    header h4,
-    header h5{
-        font-size:20px;
-    }
-
-    .main{
-        padding:120px 20px;
-    }
-
-    .main::before{
-        background-size:min(300px,80vw);
-    }
-
-    .main h1{
-        font-size:36px;
-    }
-
-    .main p{
-        font-size:18px;
-    }
-
-    .button{
-        font-size:18px;
-        padding:14px 28px;
-    }
-}
-
-@media (max-width:480px){
-
-    header{
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
-    }
-
-    header h1{
-        flex:unset;
-        font-size:28px;
-    }
-
-    .header-crown{
-        width:40px;
-    }
-
-    header h2,
-    header h3,
-    header h4,
-    header h5{
-        width:100%;
-        text-align:center;
-        font-size:18px;
-    }
-
-    .main{
-        padding:80px 15px;
-    }
-
-    .main::before{
-        background-size:220px;
-        opacity:0.22;
-    }
-
-    .main h1{
-        font-size:28px;
-    }
-
-    .main p{
-        font-size:16px;
-        line-height:1.6;
-    }
-
-    .button{
-        display:inline-block;
-        width:80%;
-        max-width:250px;
-        text-align:center;
-    }
-}
-</style>
-
 <body>
-<header>
-    <h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown"></h1>
-    <h2><a href="Products.html" style="color:aliceblue;text-decoration:none;">Products</a></h2>
-    <h3><a href="Order.html" style="color:aliceblue;text-decoration:none;">Order</a></h3>
-    <h4><a href="ContactUs.html" style="color:aliceblue;text-decoration:none;">Contact Us</a></h4>
-    <h5><a href="AboutUs.html" style="color:aliceblue;text-decoration:none;">About Us</a></h5>
-</header>
+    <header>
+        <h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown"></h1>
+        <h2><a href="index.html">Home</a></h2>
+        <h3><a href="Products.html">Products</a></h3>
+        <h4><a href="Order.html">Order</a></h4>
+        <h5><a href="ContactUs.html">Contact Us</a></h5>
+    </header>
 
-<section class="main">
-    <h1>Welcome to Cinderella</h1>
-    <p>Your home for soft, cuddly and adorable plushies.</p>
-    <p>Discover soft, high-quality companions made to bring comfort and joy.</p>
-    <a href="Products.html" class="button">Browse</a>
-</section>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Every Plushie<br>Has A Story.</h1>
+            <p>Discover soft companions inspired by your favourite Pokémon characters. Whether you're looking for the perfect gift or adding to your own collection, Cinderella brings warmth, comfort and happiness with every plush.</p>
+            <div class="hero-buttons">
+                <a href="Products.html" class="btn btn-primary">Shop Collection</a>
+                <a href="AboutUs.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Images/mimikyu.png" alt="Mimikyu Plush">
+        </div>
+    </section>
+
+    <div class="wave">
+        <svg viewBox="0 0 1440 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#ffffff" d="M0,96 L80,112 C160,128,320,160,480,154.7 C640,149,800,107,960,96 C1120,85,1280,107,1360,117.3 L1440,128 L1440,320 L0,320Z"></path>
+        </svg>
+    </div>
+
+    <section>
+        <h2 class="section-title">Why Choose Cinderella?</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="Images/mimikyu.png" alt="Premium Plush">
+                <h3>Premium Quality</h3>
+                <p>Every plush is crafted using incredibly soft premium fabric with detailed stitching and long-lasting quality.</p>
+            </div>
+            <div class="card">
+                <img src="Images/snorlax.png" alt="Pokémon Plush">
+                <h3>Fan Favourites</h3>
+                <p>Choose from adorable Pokémon companions including Mimikyu, Snorlax and many more loved by collectors around the world.</p>
+            </div>
+            <div class="card">
+                <img src="Images/sharko.png" alt="Sharko">
+                <h3>Perfect Gifts</h3>
+                <p>Surprise someone special with a cuddly companion they'll treasure for years.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

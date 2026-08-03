@@ -1,229 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirm Order</title>
-    <link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
-
-<style>
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-body{
-    font-family:Garamond, serif;
-    margin:0;
-    background-color:#F5FAFD;
-    color:#333;
-    animation:fadeIn 1s ease-out;
-}
-
-header{
-    background:linear-gradient(to right,#222f5b,#0e1a40);
-    color:white;
-    padding:15px 20px;
-    display:flex;
-    align-items:center;
-    gap:50px;
-    flex-wrap:wrap;
-}
-
-header h1{
-    margin:0;
-    font-size:40px;
-    flex:0.48;
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.header-crown{
-    width:58px;
-    height:auto;
-}
-
-header h2,
-header h3,
-header h4,
-header h5{
-    margin:0;
-    font-size:25px;
-}
-
-.confirm-order{
-    min-height:70vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:40px 20px;
-}
-
-.form-box{
-    background:white;
-    width:430px;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-
-.form-box h1{
-    color:#222f5b;
-    text-align:center;
-    font-size:42px;
-    margin-top:0;
-    margin-bottom:10px;
-}
-
-.form-box p{
-    text-align:center;
-    font-size:20px;
-    margin-bottom:30px;
-}
-
-label{
-    display:block;
-    font-size:18px;
-    margin-bottom:8px;
-    font-weight:bold;
-}
-
-input[type="text"],
-input[type="password"]{
-    width:100%;
-    padding:12px;
-    margin-bottom:20px;
-    border:2px solid #ccc;
-    border-radius:8px;
-    font-size:18px;
-    font-family:Garamond, serif;
-    box-sizing:border-box;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus{
-    outline:none;
-    border-color:#4F81BD;
-}
-.card-details{
-    display:flex;
-    gap:15px;
-}
-
-.detail-box{
-    flex:1;
-}
-
-input[type="submit"]{
-    width:100%;
-    background:#222f5b;
-    color:white;
-    border:none;
-    padding:14px;
-    font-size:20px;
-    border-radius:10px;
-    cursor:pointer;
-    font-family:Garamond, serif;
-    transition:.3s;
-    margin-top:10px;
-}
-
-input[type="submit"]:hover{
-    background:#4F81BD;
-}
-
-.back-link{
-    display:block;
-    text-align:center;
-    margin-top:25px;
-    color:#222f5b;
-    text-decoration:none;
-    font-size:18px;
-}
-
-.back-link:hover{
-    text-decoration:underline;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>
-        Cinderella
-        <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown">
-    </h1>
-
-    <h2><a href="index.html" style="color:aliceblue;text-decoration:none;">Home</a></h2>
-    <h3><a href="Products.html" style="color:aliceblue;text-decoration:none;">Products</a></h3>
-    <h4><a href="ContactUs.html" style="color:aliceblue;text-decoration:none;">Contact Us</a></h4>
-    <h5><a href="AboutUs.html" style="color:aliceblue;text-decoration:none;">About Us</a></h5>
-</header>
-
-<main class="confirm-order">
-
-    <div class="form-box">
-
-        <h1>Confirm Order</h1>
-
-        <p>Please enter your payment details to complete your purchase.</p>
-
-        <form action="thankyou.html" method="get">
-
-            <label for="cardname">Cardholder Name</label>
-            <input
-                type="text"
-                id="cardname"
-                name="cardname"
-                placeholder="John Smith"
-                required>
-
-            <label for="cardnumber">Card Number</label>
-            <input
-                type="text"
-                id="cardnumber"
-                name="cardnumber"
-                placeholder="1234 5678 9012 3456"
-                maxlength="19"
-                required>
-
-            <div class="card-details">
-
-                <div class="detail-box">
-                    <label for="expiry">Expiry Date</label>
-                    <input
-                        type="text"
-                        id="expiry"
-                        name="expiry"
-                        placeholder="MM/YY"
-                        maxlength="5"
-                        required>
-                </div>
-
-                <div class="detail-box">
-                    <label for="cvc">CVC</label>
-                    <input
-                        type="password"
-                        id="cvc"
-                        name="cvc"
-                        placeholder="123"
-                        maxlength="4"
-                        required>
-                </div>
-
-            </div>
-
-            <input type="submit" value="Confirm Payment">
-
-        </form>
-
-        <a class="back-link" href="Order.html">← Back to Order Page</a>
-
-    </div>
-
-</main>
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Confirm Order | Cinderella</title>
+		<link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
+		<link rel="stylesheet" href="css/cinderella.css">
+	</head>
+	<body>
+		<header>
+			<h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown">
+			</h1>
+			<h2>
+				<a href="index.html">Home</a>
+			</h2>
+			<h3>
+				<a href="Products.html">Products</a>
+			</h3>
+			<h4>
+				<a href="ContactUs.html">Contact Us</a>
+			</h4>
+			<h5>
+				<a href="AboutUs.html">About Us</a>
+			</h5>
+		</header>
+		<section class="page-hero">
+			<h1>Confirm Your Order</h1>
+			<p>Enter your payment details to complete your purchase securely.</p>
+		</section>
+		<main class="page-content">
+			<form class="surface form-card" action="thankyou.html" method="get">
+				<h2 class="section-title">Payment Details</h2>
+				<div class="form-grid">
+					<div class="field full">
+						<label for="cardname">Cardholder Name</label>
+						<input type="text" id="cardname" name="cardname" placeholder="John Smith" autocomplete="cc-name" required>
+					</div>
+					<div class="field full">
+						<label for="cardnumber">Card Number</label>
+						<input type="tel" id="cardnumber" name="cardnumber" placeholder="1234 5678 9012 3456" maxlength="23" inputmode="numeric" autocomplete="cc-number" pattern="[0-9 ]{13,23}" title="Enter a card number using 13 to 19 digits." required>
+					</div>
+					<div class="field">
+						<label for="expiry">Expiry Date</label>
+						<input type="tel" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" inputmode="numeric" autocomplete="cc-exp" pattern="(0[1-9]|1[0-2])/[0-9]{2}" title="Enter the expiry date as MM/YY." required>
+					</div>
+					<div class="field">
+						<label for="cvc">CVC</label>
+						<input type="password" id="cvc" name="cvc" placeholder="123" maxlength="4" inputmode="numeric" autocomplete="cc-csc" pattern="[0-9]{3,4}" title="Enter the three- or four-digit CVC." required>
+					</div>
+				</div>
+				<div class="form-actions">
+					<input type="submit" value="Confirm Payment">
+				</div>
+				<a class="back-link" href="Order.html">&larr; Back to Order Page</a>
+			</form>
+		</main>
+		<script>
+			const cardNumber = document.getElementById('cardnumber');
+			const expiry = document.getElementById('expiry');
+			cardNumber.addEventListener('input', function() {
+				const digits = this.value.replace(/\D/g, '').slice(0, 19);
+				this.value = digits.replace(/(.{4})/g, '$1 ').trim();
+			});
+			expiry.addEventListener('input', function() {
+				const digits = this.value.replace(/\D/g, '').slice(0, 4);
+				this.value = digits.length > 2 ? digits.slice(0, 2) + '/' + digits.slice(2) : digits;
+			});
+		</script>
+	</body>
 </html>

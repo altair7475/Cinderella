@@ -1,329 +1,83 @@
 <!--Author: Bosco, 261304H-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Products | Cinderella</title>
     <link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
-</head>
-
-<style>
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeUp {
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Garamond, serif;
-    margin:0;
-    background-color:#F5FAFD;
-    color:#333;
-    animation: fadeIn 1s ease-out;
-}
-
-header{
-    background:linear-gradient(to right,#222f5b,#0e1a40);
-    color:white;
-    text-align:left;
-    padding:15px 20px;
-    display:flex;
-    align-items:center;
-    gap:50px;
-    flex-wrap:wrap;
-}
-
-header h2,
-header h3,
-header h4,
-header h5{
-    margin:0;
-    font-size:25px;
-}
-
-header h1{
-    margin:0;
-    font-size:40px;
-    flex:0.48;
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.header-crown{
-    width:58px;
-    height:auto;
-}
-
-.tabler{
-    display:flex;
-    justify-content:center;
-    margin-top:50px;
-    padding:0 20px;
-}
-
-table{
-    width:100%;
-    max-width:900px;
-    border-collapse:collapse;
-    text-align:center;
-    font-size:20px;
-    background:white;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
-}
-
-caption{
-    font-size:32px;
-    font-weight:bold;
-    margin-bottom:20px;
-}
-
-th{
-    background:#222f5b;
-    color:white;
-    padding:15px 25px;
-}
-
-td{
-    border:1px solid #ccc;
-    padding:15px 25px;
-}
-
-td img{
-    width:45px;
-    height:auto;
-}
-
-.button{
-    font-family:Garamond,serif;
-    background-color:#222f5b;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:10px;
-    font-size:20px;
-    display:inline-block;
-    animation:fadeUp 1s ease-out;
-}
-
-.button:hover{
-    background-color:#4F81BD;
-}
-
-.button-container{
-    text-align:center;
-    margin:30px 0 40px;
-}
-
-@media (max-width:768px){
-
-    header{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:20px;
-        text-align:center;
-    }
-
-    header h1{
-        flex:100%;
-        justify-content:center;
-        font-size:34px;
-    }
-
-    .header-crown{
-        width:48px;
-    }
-
-    header h2,
-    header h3,
-    header h4,
-    header h5{
-        font-size:20px;
-    }
-
-    .tabler{
-        overflow-x:auto;
-        padding:0 15px;
-    }
-
-    table{
-        min-width:650px;
-        font-size:18px;
-    }
-
-    th,
-    td{
-        padding:12px;
-    }
-
-    caption{
-        font-size:28px;
-    }
-
-    td img{
-        width:40px;
-    }
-
-    .button{
-        font-size:18px;
-        padding:14px 28px;
-    }
-}
-
-@media (max-width:480px){
-
-    header{
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
-    }
-
-    header h1{
-        flex:unset;
-        font-size:28px;
-    }
-
-    .header-crown{
-        width:40px;
-    }
-
-    header h2,
-    header h3,
-    header h4,
-    header h5{
-        width:100%;
-        text-align:center;
-        font-size:18px;
-    }
-
-    table{
-        width:100%;
-        min-width:0; 
-        font-size:13px;
-    }
-
-    th,
-    td{
-        padding:6px;
-    }
-
-    td img{
-        width:28px;
-        height:auto;
-    }
-
-    caption{
-        font-size:22px;
-    }
-
-    .button{
-        width:80%;
-        max-width:250px;
-    }
-}
-
-</style>
-
-<body>
-
-<header>
-    <h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown"></h1>
-    <h2><a href="index.html" style="color:aliceblue;text-decoration:none;">Home</a></h2>
-    <h3><a href="Order.html" style="color:aliceblue;text-decoration:none;">Order</a></h3>
-    <h4><a href="ContactUs.html" style="color:aliceblue;text-decoration:none;">Contact Us</a></h4>
-    <h5><a href="AboutUs.html" style="color:aliceblue;text-decoration:none;">About Us</a></h5>
-</header>
-
-<div class="tabler">
-
-<table>
-
-<caption>Menu & Price List</caption>
-
-<tr>
-    <th>Photo</th>
-    <th>Plushie</th>
-    <th>Quantity Left</th>
-    <th>Price</th>
-</tr>
-
-<tr>
-    <td><img src="Images/snorlax.png" alt="Snorlax Plush"></td>
-    <td>Snorlax</td>
-    <td>500</td>
-    <td>$25</td>
-</tr>
-
-<tr>
-    <td><img src="Images/sharko.png" alt="Sharko Plush"></td>
-    <td>Sharko</td>
-    <td>120</td>
-    <td>$30</td>
-</tr>
-
-<tr>
-    <td><img src="Images/mimikyu.png" alt="Mimikyu Plush"></td>
-    <td>Mimikyu</td>
-    <td>100</td>
-    <td>$25</td>
-</tr>
-
-<tr>
-    <td><img src="Images/ariiqpillow.png" alt="Ariiq Pillow"></td>
-    <td>Ariiq Body Pillow</td>
-    <td>1</td>
-    <td>$69</td>
-</tr>
-
-<tr>
-    <td><img src="Images/pigeon_plush.jpg" alt="Pigeon Plush"></td>
-    <td>Pigeon</td>
-    <td>180</td>
-    <td>$25</td>
-</tr>
-
-<tr>
-    <td><img src="Images/RedPandaPlush.png" alt="Red Panda"></td>
-    <td>Red Panda</td>
-    <td>250</td>
-    <td>$40</td>
-</tr>
-
-<tr>
-    <td><img src="Images/cat.png" alt="Black Cat"></td>
-    <td>Black Cat</td>
-    <td>120</td>
-    <td>$30</td>
-</tr>
-
-</table>
-
-</div>
-
-<div class="button-container">
-    <a href="Order.html" class="button">Order</a>
-</div>
-
-</body>
+    <link rel="stylesheet" href="css/cinderella.css">
+  </head>
+  <body>
+    <header>
+      <h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown">
+      </h1>
+      <h2>
+        <a href="index.html">Home</a>
+      </h2>
+      <h3>
+        <a href="Order.html">Order</a>
+      </h3>
+      <h4>
+        <a href="ContactUs.html">Contact Us</a>
+      </h4>
+      <h5>
+        <a href="AboutUs.html">About Us</a>
+      </h5>
+    </header>
+    <section class="page-hero">
+      <h1>Our Plush Collection</h1>
+      <p>Choose a soft companion made to bring a little more joy to every day.</p>
+    </section>
+    <main class="page-content">
+      <h2 class="section-title">Available Plushies</h2>
+      <div class="product-grid">
+        <article class="surface product-card">
+          <img src="Images/snorlax.png" alt="Snorlax Plush">
+          <h2>Snorlax</h2>
+          <p class="price">$25</p>
+          <p class="stock">500 left</p>
+        </article>
+        <article class="surface product-card">
+          <img src="Images/sharko.png" alt="Sharko Plush">
+          <h2>Sharko</h2>
+          <p class="price">$30</p>
+          <p class="stock">120 left</p>
+        </article>
+        <article class="surface product-card">
+          <img src="Images/mimikyu.png" alt="Mimikyu Plush">
+          <h2>Mimikyu</h2>
+          <p class="price">$25</p>
+          <p class="stock">100 left</p>
+        </article>
+        <article class="surface product-card">
+          <img src="Images/ariiqpillow.png" alt="Ariiq Body Pillow">
+          <h2>Ariiq Body Pillow</h2>
+          <p class="price">$69</p>
+          <p class="stock">1 left</p>
+        </article>
+        <article class="surface product-card">
+          <img src="Images/pigeon_plush.jpg" alt="Pigeon Plush">
+          <h2>Pigeon</h2>
+          <p class="price">$25</p>
+          <p class="stock">180 left</p>
+        </article>
+        <article class="surface product-card">
+          <img src="Images/RedPandaPlush.png" alt="Red Panda Plush">
+          <h2>Red Panda</h2>
+          <p class="price">$40</p>
+          <p class="stock">250 left</p>
+        </article>
+        <article class="surface product-card">
+          <img src="Images/cat.png" alt="Black Cat Plush">
+          <h2>Black Cat</h2>
+          <p class="price">$30</p>
+          <p class="stock">120 left</p>
+        </article>
+      </div>
+      <p style="text-align:center; margin:38px 0 0;">
+        <a class="button" href="Order.html">Order Your Plushie</a>
+      </p>
+    </main>
+  </body>
 </html>

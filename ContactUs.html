@@ -1,290 +1,81 @@
-<!--Author: Cyrus, 261432K -->
+<!--Author: Cyrus, 261432K-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
-</head>
-
-<style>
-
-@keyframes fadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Garamond, serif;
-    margin:0;
-    background:#F5FAFD;
-    color:#333;
-    animation:fadeIn 1s ease-out;
-}
-
-header{
-    background:linear-gradient(to right,#222f5b,#0e1a40);
-    color:white;
-    text-align:left;
-    padding:15px 20px;
-    display:flex;
-    align-items:center;
-    gap:50px;
-    flex-wrap:wrap;
-}
-
-header h1{
-    margin:0;
-    font-size:40px;
-    flex:0.48;
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.header-crown{
-    width:58px;
-    height:auto;
-}
-
-header h2,
-header h3,
-header h4,
-header h5{
-    margin:0;
-    font-size:25px;
-}
-
-.container{
-    max-width:900px;
-    margin:60px auto;
-    background:white;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
-    animation:fadeUp 1s ease-out;
-}
-
-.container h1{
-    text-align:center;
-    color:#222f5b;
-    margin-top:0;
-}
-
-.container p{
-    font-size:20px;
-    line-height:1.6;
-}
-
-label{
-    font-size:20px;
-    font-weight:bold;
-}
-
-input,
-textarea{
-    width:100%;
-    padding:12px;
-    font-family:Garamond, serif;
-    font-size:18px;
-    border:1px solid #bbb;
-    border-radius:8px;
-    margin-top:6px;
-}
-
-textarea{
-    resize:vertical;
-}
-
-input[type="submit"]{
-    width:auto;
-    background:#222f5b;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    border-radius:10px;
-    font-size:20px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-input[type="submit"]:hover{
-    background:#4F81BD;
-}
-
-.contact-info{
-    margin-top:35px;
-    font-size:20px;
-}
-
-.contact-info p{
-    margin:12px 0;
-}
-
-.contact-info a{
-    color:#222f5b;
-    text-decoration:none;
-}
-
-.contact-info a:hover{
-    text-decoration:underline;
-}
-
-@media (max-width:768px){
-
-    header{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:20px;
-        text-align:center;
-    }
-
-    header h1{
-        flex:100%;
-        justify-content:center;
-        font-size:34px;
-    }
-
-    .header-crown{
-        width:48px;
-    }
-
-    header h2,
-    header h3,
-    header h4,
-    header h5{
-        font-size:20px;
-    }
-
-    .container{
-        margin:30px 20px;
-        padding:30px;
-    }
-
-    .container h1{
-        font-size:36px;
-    }
-
-    .container p,
-    label,
-    .contact-info{
-        font-size:18px;
-    }
-}
-
-@media (max-width:480px){
-
-    header{
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
-    }
-
-    header h1{
-        flex:unset;
-        font-size:28px;
-    }
-
-    .header-crown{
-        width:40px;
-    }
-
-    header h2,
-    header h3,
-    header h4,
-    header h5{
-        width:100%;
-        text-align:center;
-        font-size:18px;
-    }
-
-    .container{
-        margin:20px 15px;
-        padding:20px;
-    }
-
-    .container h1{
-        font-size:28px;
-    }
-
-    .container p,
-    label,
-    .contact-info{
-        font-size:16px;
-    }
-
-    input,
-    textarea{
-        font-size:16px;
-    }
-
-    input[type="submit"]{
-        width:100%;
-    }
-}
-
-</style>
-
-<body>
-
-<header>
-    <h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown"></h1>
-    <h2><a href="index.html" style="color:aliceblue;text-decoration:none;">Home</a></h2>
-    <h3><a href="Products.html" style="color:aliceblue;text-decoration:none;">Products</a></h3>
-    <h4><a href="Order.html" style="color:aliceblue;text-decoration:none;">Order</a></h4>
-    <h5><a href="AboutUs.html" style="color:aliceblue;text-decoration:none;">About Us</a></h5>
-</header>
-
-<div class="container">
-
-<h1>Contact Us</h1>
-
-<p>
-We value your feedback and inquiries. Please feel free to reach out by filling in the contact form below.
-Our team is always happy to answer your questions and provide assistance.
-</p>
-
-<form action="feedbackpage.html" method="get">
-
-<label for="name">Full Name:</label>
-<input type="text" id="name" name="name" required">
-
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" required>
-
-<label for="phone">Phone Number:</label>
-<input type="tel" id="phone" name="phone">
-
-<label for="message">Message:</label>
-<textarea id="message" name="message" rows="8" required></textarea>
-<br><br>
-<input type="submit" value="Submit">
-</form>
-<div class="contact-info">
-<p>📧 Email: info@cinderella.com</p>
-<p>📞 Phone: +65 8927 5369</p>
-<p>
-<a href="https://maps.app.goo.gl/xpxos64Qe1jieXf87">
-📍 Nanyang Polytechnic
-</a>
-</p>
-</div>
-</div>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contact Us | Cinderella</title>
+		<link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
+		<link rel="stylesheet" href="css/cinderella.css">
+	</head>
+	<body>
+		<header>
+			<h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown">
+			</h1>
+			<h2>
+				<a href="index.html">Home</a>
+			</h2>
+			<h3>
+				<a href="Products.html">Products</a>
+			</h3>
+			<h4>
+				<a href="Order.html">Order</a>
+			</h4>
+			<h5>
+				<a href="AboutUs.html">About Us</a>
+			</h5>
+		</header>
+		<section class="page-hero">
+			<h1>We'd Love to Hear From You</h1>
+			<p>Questions, feedback, or a plushie request? Send us a message and our team will be happy to help.</p>
+		</section>
+		<main class="page-content">
+			<div class="contact-layout">
+				<form class="surface form-card" action="feedbackpage.html" method="get">
+					<h2 class="section-title">Send a Message</h2>
+					<div class="form-grid">
+						<div class="field">
+							<label for="name">Full Name</label>
+							<input type="text" id="name" name="name" autocomplete="name" required>
+						</div>
+						<div class="field">
+							<label for="email">Email Address</label>
+							<input type="email" id="email" name="email" autocomplete="email" required>
+						</div>
+						<div class="field full">
+							<label for="phone">Phone Number <small>(optional)</small>
+							</label>
+							<input type="tel" id="phone" name="phone" autocomplete="tel">
+						</div>
+						<div class="field full">
+							<label for="message">Message</label>
+							<textarea id="message" name="message" required></textarea>
+						</div>
+					</div>
+					<div class="form-actions">
+						<input type="submit" value="Send Message">
+					</div>
+				</form>
+				<aside class="surface contact-info">
+					<h2>Contact Details</h2>
+					<p>We're always here to help make your plushie experience wonderful.</p>
+					<p>
+						<strong>Email</strong>
+						<br>
+						<a href="mailto:info@cinderella.com">info@cinderella.com</a>
+					</p>
+					<p>
+						<strong>Phone</strong>
+						<br>
+						<a href="tel:+6589275369">+65 8927 5369</a>
+					</p>
+					<p>
+						<strong>Visit Us</strong>
+						<br>
+						<a href="https://maps.app.goo.gl/xpxos64Qe1jieXf87" target="_blank" rel="noopener noreferrer">Nanyang Polytechnic</a>
+					</p>
+				</aside>
+			</div>
+		</main>
+	</body>
 </html>
