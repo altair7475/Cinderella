@@ -6,83 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
-</head><meta name="viewport" content="width=device-width, initial-scale=1">
-<style>/* images never overflow their box */
-img { max-width: 100;
-height: auto; }
-/* boxes in % rather than px */
-.column { width: 50; }
-* { box-sizing: border-box; }
-     (max-width: 600) {
-/* stack the menu vertically */
-nav a { display: block; }
-/* cards become full width */
-.card { width: 100; }
-h1 { font-size: 18; }
-}.row { display: flex; }
-    .card { width: 33; box-sizing: border-box; }
-    (max-width: 600) {
-.row { flex-direction: column; }
-.card { width: 100; }
+
+<style>
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeUp {
+@keyframes fadeUp{
     from{
         opacity:0;
         transform:translateY(30px);
     }
-
     to{
         opacity:1;
         transform:translateY(0);
     }
 }
 
+*{
+    box-sizing:border-box;
+}
+
 body{
     font-family:Garamond, serif;
     margin:0;
-    background-color:#F5FAFD;
+    background:#F5FAFD;
     color:#333;
-    animation: fadeIn 1s ease-out;
+    animation:fadeIn 1s ease-out;
 }
-
 
 header{
-background:linear-gradient(to right,#222f5b,#0e1a40);
-color:white;
-text-align:left;
-padding:15px 20px;
-display:flex;
-align-items:center;
-gap:50px;
-flex-wrap:wrap;
-}
-
-
-header h2,
-header h3,
-header h4,
-header h5{
-margin:0;
-font-size: 25px;
+    background:linear-gradient(to right,#222f5b,#0e1a40);
+    color:white;
+    text-align:left;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
 }
 
 header h1{
-margin: 0;
-font-size: 40px;
-flex:0.48;
-display:flex;
-align-items:center;
-gap:12px;
+    margin:0;
+    font-size:40px;
+    flex:0.48;
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
 .header-crown{
@@ -90,69 +62,262 @@ gap:12px;
     height:auto;
 }
 
+header h2,
+header h3,
+header h4,
+header h5{
+    margin:0;
+    font-size:25px;
+}
+
+header a{
+    color:aliceblue;
+    text-decoration:none;
+}
+
+header a:hover{
+    color:#d9e8ff;
+}
+
+.container{
+    max-width:900px;
+    margin:60px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    animation:fadeUp 1s ease-out;
+}
+
+.container h1{
+    text-align:center;
+    color:#222f5b;
+    margin-top:0;
+    font-size:42px;
+}
+
+.container h2{
+    color:#222f5b;
+    margin-top:35px;
+    font-size:30px;
+}
+
+.container h3{
+    margin-top:25px;
+    margin-bottom:5px;
+    color:#4F81BD;
+    font-size:24px;
+}
+
+.container p{
+    font-size:20px;
+    line-height:1.7;
+}
+
+.container ul{
+    padding-left:30px;
+}
+
+.container li{
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:10px;
+}
+
+@media (max-width:768px){
+
+    header{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+        text-align:center;
+    }
+
+    header h1{
+        flex:100%;
+        justify-content:center;
+        font-size:34px;
+    }
+
+    .header-crown{
+        width:48px;
+    }
+
+    header h2,
+    header h3,
+    header h4,
+    header h5{
+        font-size:20px;
+    }
+
+    .container{
+        margin:30px 20px;
+        padding:30px;
+    }
+
+    .container h1{
+        font-size:36px;
+    }
+
+    .container h2{
+        font-size:28px;
+    }
+
+    .container h3{
+        font-size:22px;
+    }
+
+    .container p,
+    .container li{
+        font-size:18px;
+    }
+}
+
+@media (max-width:480px){
+
+    header{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+    header h1{
+        flex:unset;
+        font-size:28px;
+    }
+
+    .header-crown{
+        width:40px;
+    }
+
+    header h2,
+    header h3,
+    header h4,
+    header h5{
+        width:100%;
+        text-align:center;
+        font-size:18px;
+    }
+
+    .container{
+        margin:20px 15px;
+        padding:20px;
+    }
+
+    .container h1{
+        font-size:28px;
+    }
+
+    .container h2{
+        font-size:24px;
+    }
+
+    .container h3{
+        font-size:20px;
+    }
+
+    .container p,
+    .container li{
+        font-size:16px;
+    }
+}
+
 </style>
+</head>
+
+<body>
 
 <header>
     <h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown"></h1>
-    <h2><a href="index.html" style="color: aliceblue; text-decoration: none;">Home</a></h2>
-    <h3><a href="Products.html" style="color: aliceblue; text-decoration: none;">Products</a></h3>
-    <h4><a href="Order.html" style="color: aliceblue; text-decoration: none;">Order</a></h4>
-    <h5><a href="ContactUs.html" style="color: aliceblue; text-decoration: none;">Contact Us</a></h5>
+
+    <h2><a href="index.html">Home</a></h2>
+    <h3><a href="Products.html">Products</a></h3>
+    <h4><a href="Order.html">Order</a></h4>
+    <h5><a href="ContactUs.html">Contact Us</a></h5>
 </header>
 
-<!--Top stuff done by Haysab to make website more appealing-->
-<!--Everything below was done by Neyton-->
-
-
+<div class="container">
 
 <h1>About Us</h1>
+
 <h2>Welcome to Cinderella</h2>
+
 <p>
- At Cinderella, we believe every plushie has the power to bring comfort, spark imagination,
+At Cinderella, we believe every plushie has the power to bring comfort, spark imagination,
 and create lasting memories. From bedtime companions to thoughtful gifts, our plush friends
 are designed to make people of all ages smile.
 </p>
+
 <h2>Our Mission</h2>
+
 <p>
-     Our mission is to create high-quality, thoughtfully designed plush toys that inspire joy,
-     comfort, and connection.
+Our mission is to create high-quality, thoughtfully designed plush toys that inspire joy,
+comfort, and connection.
 </p>
+
 <h2>Our Vision</h2>
+
 <p>
-    We envision a world where everyone has a source of comfort they can hold close...
+We envision a world where everyone has a source of comfort they can hold close,
+bringing warmth, happiness, and unforgettable memories into everyday life.
 </p>
 
-    <h2>Our Story</h2>
-    <p>
-        Cinderella was founded in 2021 by three musketeers who are Ethan Matthew, Isaac and Elvis
-    </p>
+<h2>Our Story</h2>
 
-    <h2>Meet Our Team</h2>
+<p>
+Cinderella was founded in 2021 by three passionate friends who shared a love
+for adorable plushies and wanted to spread happiness through comforting,
+high-quality companions.
+</p>
 
-    <h3>Haysab - Founder & Creative Director</h3>
-    <p>Leads the design team and oversees the creation of every new plush character.</p>
+<h2>Meet Our Team</h2>
 
-    <h3>Reyner - Co-Founder & Operations Manager</h3>
-    <p>Manages production, quality assurance, and logistics.</p>
+<h3>Haysab - Founder & Creative Director</h3>
 
-    <h3>Bosco - Head of Customer Experience</h3>
-    <p>Provides friendly customer support and ensures every shopper has a great experience.</p>
+<p>
+Leads the design team and oversees the creation of every new plush character.
+</p>
 
-    <h3>Cyrus - Product Designer</h3>
-    <p>Creates adorable plush companions with comfort and durability in mind.</p>
+<h3>Reyner - Co-Founder & Operations Manager</h3>
 
-    <h2>Our Values</h2>
+<p>
+Manages production, quality assurance, and logistics to ensure every plushie
+meets our high standards.
+</p>
 
-    <ul>
-        <li><strong>Quality First:</strong> Soft, safe, and durable plushies.</li>
-        <li><strong>Creativity:</strong> Every plushie has its own personality.</li>
-        <li><strong>Kindness:</strong> Bringing comfort to people of all ages.</li>
-        <li><strong>Sustainability:</strong> Using environmentally friendly materials whenever possible.</li>
-    </ul>
+<h3>Bosco - Head of Customer Experience</h3>
 
-    <p>
-        Thank you for being part of the Cinderella family. Whether you're shopping for your first
-        plush friend or adding to a growing collection, we're honored to help create moments of
-        comfort, happiness, and adventure.
-    </p>
+<p>
+Provides friendly customer support and ensures every shopper has a wonderful
+experience from start to finish.
+</p>
+
+<h3>Cyrus - Product Designer</h3>
+
+<p>
+Creates adorable plush companions with comfort, durability, and creativity in mind.
+</p>
+
+<h2>Our Values</h2>
+
+<ul>
+    <li><strong>Quality First:</strong> Soft, safe, and durable plushies made to last.</li>
+
+    <li><strong>Creativity:</strong> Every plushie has its own personality and unique charm.</li>
+
+    <li><strong>Kindness:</strong> Bringing comfort and happiness to people of all ages.</li>
+
+    <li><strong>Sustainability:</strong> Using environmentally friendly materials whenever possible.</li>
+</ul>
+
+<p>
+Thank you for being part of the Cinderella family. Whether you're shopping for your first plush friend
+or adding to a growing collection, we're honored to help create moments of comfort,
+happiness, and adventure. We look forward to bringing smiles to you and your loved ones
+for many years to come.
+</p>
+
+</div>
+
+</body>
 </html>
