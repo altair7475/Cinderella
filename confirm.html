@@ -3,75 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>Confirm Order</title>
     <link rel="icon" type="image/png" href="Images/CLIPARTcrown.png">
-</head>
+
 <style>
-
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeUp {
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 body{
-    font-family:Garamond, serif;
+    font-family: Garamond, serif;
     margin:0;
     background-color:#F5FAFD;
     color:#333;
-    animation: fadeIn 1s ease-out;
+    animation:fadeIn 1s ease-out;
 }
-
 
 header{
-background:linear-gradient(to right,#222f5b,#0e1a40);
-color:white;
-text-align:left;
-padding:15px 20px;
-display:flex;
-align-items:center;
-gap:50px;
-flex-wrap:wrap;
-}
-
-
-header h2,
-header h3,
-header h4,
-header h5{
-margin:0;
-font-size: 25px;
+    background:linear-gradient(to right,#222f5b,#0e1a40);
+    color:white;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
 }
 
 header h1{
-margin: 0;
-font-size: 40px;
-flex:0.48;
-display:flex;
-align-items:center;
-gap:12px;
+    margin:0;
+    font-size:40px;
+    flex:0.48;
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
 .header-crown{
     width:58px;
     height:auto;
 }
+
+header h2,
+header h3,
+header h4,
+header h5{
+    margin:0;
+    font-size:25px;
+}
+
+.confirm-order{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.form-box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    text-align:center;
+    width:400px;
+}
+
+.form-box h1{
+    color:#222f5b;
+    margin-bottom:10px;
+    font-size:42px;
+}
+
+.form-box p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    font-size:20px;
+    margin-bottom:10px;
+    text-align:left;
+}
+
+input[type="text"]{
+    width:100%;
+    padding:12px;
+    font-size:18px;
+    border:2px solid #ccc;
+    border-radius:8px;
+    margin-bottom:25px;
+    box-sizing:border-box;
+    font-family:Garamond, serif;
+}
+
+input[type="text"]:focus{
+    outline:none;
+    border-color:#4F81BD;
+}
+
+input[type="submit"]{
+    width:100%;
+    background:#222f5b;
+    color:white;
+    border:none;
+    padding:14px;
+    font-size:20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-family:Garamond, serif;
+}
+
+input[type="submit"]:hover{
+    background:#4F81BD;
+}
+
+.back-link{
+    display:inline-block;
+    margin-top:20px;
+    color:#222f5b;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.back-link:hover{
+    text-decoration:underline;
+}
 </style>
+</head>
+
+<body>
 
 <header>
     <h1>Cinderella <img class="header-crown" src="Images/CLIPARTcrown.png" alt="Crown"></h1>
@@ -81,20 +143,28 @@ gap:12px;
     <h5><a href="AboutUs.html" style="color: aliceblue; text-decoration: none;">About Us</a></h5>
 </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirm Order</Obj>
-    </title>
-    <link rel="icon" type="lotus" href="lotus.png">
-</head>
-<form action="thankyou.html" method="get"
-    <body>Please key in your Credit/Debit Card Pin</body>
-    <label for="pin">Pin Number:</label><br>
-    <input type="text" id="pin" name="pin" rows="1" cols="40" placeholder="xxxx-xxxx-xxxx-xxxx" required></input>
+<main class="confirm-order">
+    <div class="form-box">
+        <h1>Confirm Order</h1>
+        <p>Please enter your Credit/Debit Card PIN to complete your purchase.</p>
 
-    <input type="submit" value="Confirm">
-    <br><br?>
-    <a href="Order.html">Back to Order Page</a>
-</form>
+        <form action="thankyou.html" method="get">
+            <label for="pin">PIN Number</label>
+
+            <input
+                type="password"
+                id="pin"
+                name="pin"
+                placeholder="••••"
+                maxlength="6"
+                required>
+
+            <input type="submit" value="Confirm Payment">
+        </form>
+
+        <a class="back-link" href="Order.html">← Back to Order Page</a>
+    </div>
+</main>
+
+</body>
 </html>
